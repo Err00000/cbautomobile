@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # The secret key is read from an environment variable. Fallback to a default for local development.
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-6jspookmgnq=3m3^hpmh#xjx^h$7+la9yhi*xvy+@gsjh734et')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG is True by default, but will be False if the an environment variable DEBUG is set to 'False'.
@@ -84,25 +84,15 @@ WSGI_APPLICATION = 'cbnou_backend.wsgi.application'
 
 # Database configuration is read from the DATABASE_URL environment variable.
 # A local SQLite database is used as a fallback for local development.
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.config(
-            conn_max_age=600,
-            conn_health_checks=True,
-            ssl_require=True,
-        )
+
+DATABASES = {
+    'default': {
+        "ENGINE": 'django.db.backends.sqlite3',
+        "NAME": BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'cbdb', # Replace with your PostgreSQL database name
-            'USER': 'cbadmin', # Replace with your PostgreSQL username
-            'PASSWORD': 'aA1234567892006!.', # Replace with your PostgreSQL password
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
+}
+database_url = os.environ.get('DATABASE_URL')
+DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 # Password validation
