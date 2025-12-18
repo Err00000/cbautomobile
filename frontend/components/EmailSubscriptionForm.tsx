@@ -23,8 +23,10 @@ const EmailSubscriptionForm: React.FC = () => {
     setIsSuccess(false);
     setIsSubmitting(true);
 
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
     try {
-      const response = await fetch('http://localhost:8000/api/subscribe/', {
+      const response = await fetch(`${apiUrl}/api/subscribe/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
