@@ -411,18 +411,34 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, part
           </>
         ) : (
           <>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-yellow-600/20 rounded-xl text-yellow-500">
-                <IconComponent size={32} />
+            <div className="flex flex-col md:flex-row gap-8">
+              {partner.image && (
+                <div className="md:w-1/3 flex-shrink-0">
+                  <img src={partner.image} alt={partner.name} className="w-full h-auto object-cover rounded-lg shadow-lg" />
+                </div>
+              )}
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold text-white mb-2">
+                  {partner.name}
+                </h3>
+                <p className="text-neutral-400 mb-6">
+                  {partner.description[language]}
+                </p>
+
+                <div className="flex items-center gap-4 mb-6 border-t border-b border-neutral-800 py-4">
+                  <div className="p-3 bg-yellow-600/20 rounded-xl text-yellow-500">
+                    <IconComponent size={24} />
+                  </div>
+                  <h4 className="text-xl font-semibold text-white">
+                    {service.title[language]}
+                  </h4>
+                </div>
+
+                <p className="text-neutral-300 leading-relaxed">
+                  {service.longDescription[language]}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-white">
-                {service.title[language]}
-              </h3>
             </div>
-            
-            <p className="text-neutral-300 leading-relaxed">
-              {service.longDescription[language]}
-            </p>
           </>
         )}
 
@@ -637,7 +653,7 @@ const ServiceDetailPage: React.FC<{ language: Language }> = ({ language }) => {
 
                    <div className="grid gap-6 md:grid-cols-2">
                      {service.partners.map(partner => (
-                       <div key={partner.id} className="bg-black/40 border border-neutral-800 p-6 rounded-xl hover:border-yellow-600/50 transition-colors">
+                       <div key={partner.id} className="relative bg-black/40 border border-neutral-800 p-6 rounded-xl hover:border-yellow-600/50 transition-colors">
                           <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
                           <p className="text-sm text-neutral-400 mb-6">{partner.description[language]}</p>
                           

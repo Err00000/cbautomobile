@@ -213,7 +213,21 @@ const tudoseAlexandruFinanz = {
     [Language.IT]: 'Partner finanziario di fiducia.',
   },
   phone: '+49 15175312107', // Placeholder, user to provide correct number
-  website: '#' // Placeholder, user to provide correct site
+  website: '#', // Placeholder, user to provide correct site
+  image: '/tudose.jpg'
+};
+
+const emanuelMladinPartner = {
+  id: 'emanuel-mladin',
+  name: 'Emanuel Mladin',
+  description: {
+    [Language.RO]: 'Partener asigurări.',
+    [Language.DE]: 'Versicherungspartner.',
+    [Language.EN]: 'Insurance partner.',
+    [Language.IT]: 'Partner assicurativo.',
+  },
+  phone: '+49 15175312107',
+  image: '/mladin.jpg'
 };
 
 export const FEATURED_CARS: Car[] = [
@@ -975,12 +989,12 @@ export const SERVICES: ServiceData[] = [
     title: { [Language.RO]: 'Asigurări', [Language.DE]: 'Versicherungen', [Language.EN]: 'Insurance', [Language.IT]: 'Assicurazioni' },
     description: { [Language.RO]: 'Auto, viață, sănătate și bunuri.', [Language.DE]: 'Auto, Leben, Gesundheit und Eigentum.', [Language.EN]: 'Auto, life, health, and property.', [Language.IT]: 'Auto, vita, salute e proprietà.' },
     longDescription: {
-      [Language.RO]: 'Nu va putem garanta cele mai ieftine asigurari dar va putem asigura de cea mai buna calitate in raport cu piata actuala !',
-      [Language.DE]: 'Wir können Ihnen nicht die günstigsten Versicherungen garantieren, aber wir können Ihnen die beste Qualität im Verhältnis zum aktuellen Markt sichern!',
-      [Language.EN]: 'We cannot guarantee you the cheapest insurance, but we can assure you of the best quality in relation to the current market!',
-      [Language.IT]: 'Non possiamo garantirvi l\'assicurazione più economica, ma possiamo assicurarvi la migliore qualità in relazione al mercato attuale!',
+      [Language.RO]: 'Vă garantăm cel mai bun raport preț-calitate de pe piață! Plătiți puțin pentru servicii de top.',
+      [Language.DE]: 'Wir garantieren das beste Preis-Leistungs-Verhältnis auf dem Markt! Zahlen Sie wenig für Top-Dienstleistungen.',
+      [Language.EN]: 'We guarantee the best price-quality ratio on the market! Pay little for top services.',
+      [Language.IT]: 'Garantiamo il miglior rapporto qualità-prezzo sul mercato! Pagate poco per servizi di alto livello.',
     },
-    partners: [tudoseAlexandruFinanz],
+    partners: [tudoseAlexandruFinanz, emanuelMladinPartner],
   },
   {
     id: 'loans-financing',
