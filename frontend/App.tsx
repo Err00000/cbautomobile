@@ -46,9 +46,9 @@ const Navbar: React.FC<NavbarProps> = ({ language, setLanguage }) => {
   return (
     <nav className="fixed top-0 w-full z-30 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <div className="flex items-center cursor-pointer group" onClick={() => navigate('/home')}>
-            <CBLogo className="w-12 h-12 md:w-16 md:h-16 scale-75 md:scale-100 transition-transform group-hover:scale-90 md:group-hover:scale-105" />
+            <CBLogo className="w-16 h-16 md:w-20 md:h-20 scale-75 md:scale-100 transition-transform group-hover:scale-90 md:group-hover:scale-105" />
             <span className="ml-3 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-600 hidden md:block">
               CB Automobile
             </span>
@@ -730,7 +730,12 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
-  }, []);
+    if (language === Language.AR) {
+      document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+    }
+  }, [language]);
 
   return (
     <BrowserRouter>

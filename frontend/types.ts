@@ -4,7 +4,9 @@ export enum Language {
   RO = 'RO',
   DE = 'DE',
   EN = 'EN',
-  IT = 'IT'
+  IT = 'IT',
+  RU = 'RU',
+  AR = 'AR'
 }
 
 export interface Partner {
