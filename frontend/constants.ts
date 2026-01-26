@@ -220,7 +220,7 @@ export const CONTENT: GlobalContent = {
       [Language.IT]: 'Contatta',
       [Language.RU]: 'Связаться',
       [Language.AR]: 'اتصل',
-    },
+    },    
     visitWebsite: {
       [Language.RO]: 'Vizitează Site',
       [Language.DE]: 'Webseite besuchen',
@@ -277,6 +277,21 @@ const emanuelMladinPartner = {
   },
   phone: '+49 15175312107',
   image: '/mladin.jpg'
+};
+
+const cristianBogdanPartner = {
+  id: 'cristian-bogdan',
+  name: 'Cristian Bogdan',
+  description: {
+    [Language.RO]: 'Partener financiar de încredere.',
+    [Language.DE]: 'Vertrauenswürdiger Finanzpartner.',
+    [Language.EN]: 'Trusted financial partner.',
+    [Language.IT]: 'Partner finanziario di fiducia.',
+    [Language.RU]: 'Надежный финансовый партнер.',
+    [Language.AR]: 'شريك مالي موثوق.',
+  },
+  phone: '+49 15175312107',
+  image: '/bogdan.jpg',
 };
 
 export const FEATURED_CARS: Car[] = [
@@ -881,6 +896,66 @@ export const SERVICES: ServiceData[] = [
     longDescription: { [Language.RO]: 'Descoperiți selecția noastră de autoturisme premium, verificate tehnic și estetic. Oferim garanție, istoric service complet și posibilități de finanțare rapidă pentru fiecare mașină din parcul nostru.', [Language.DE]: 'Entdecken Sie unsere Auswahl an Premium-Fahrzeugen, technisch und optisch geprüft. Wir bieten Garantie, vollständige Servicehistorie und schnelle Finanzierungsmöglichkeiten.', [Language.EN]: 'Discover our selection of premium cars, technically and aesthetically checked. We offer warranty, full service history, and fast financing options for every car in our fleet.', [Language.IT]: 'Scopri la nostra selezione di auto premium, controllate tecnicamente ed esteticamente. Offriamo garanzia, cronologia completa dei servizi e opzioni di finanziamento rapido.', [Language.RU]: 'Откройте для себя наш выбор премиальных автомобилей, прошедших техническую и эстетическую проверку. Мы предлагаем гарантию, полную историю обслуживания и быстрые варианты финансирования для каждого автомобиля в нашем парке.', [Language.AR]: 'اكتشف مجموعتنا المختارة من السيارات الفاخرة التي تم فحصها تقنيًا وجماليًا. نحن نقدم ضمانًا وتاريخ خدمة كامل وخيارات تمويل سريعة لكل سيارة في أسطولنا.' },
     partners: [], // Will render FEATURED_CARS instead
   },
+  {
+    id: 'loans-financing',
+    iconName: 'Banknote',
+    title: { [Language.RO]: 'Credite, Finantari auto sau imobiliare si inchideri anticipate', [Language.DE]: 'Kredite, Auto- oder Immobilienfinanzierung und vorzeitige Schließungen', [Language.EN]: 'Loans, Car or Real Estate Financing and Early Closures', [Language.IT]: 'Prestiti, Finanziamenti Auto o Immobiliari e Chiusure Anticipate', [Language.RU]: 'Кредиты, финансирование автомобилей или недвижимости и досрочное погашение', [Language.AR]: 'قروض وتمويل سيارات أو عقارات وإغلاق مبكر' },
+    description: { [Language.RO]: 'Soluții de finanțare flexibile pentru planurile tale.', [Language.DE]: 'Flexible Finanzierungslösungen für Ihre Pläne.', [Language.EN]: 'Flexible financing solutions for your plans.', [Language.IT]: 'Soluzioni di finanziamento flessibili per i tuoi piani.', [Language.RU]: 'Гибкие финансовые решения для ваших планов.', [Language.AR]: 'حلول تمويل مرنة لخططك.' },
+    longDescription: {
+      [Language.RO]: 'Va suntem alaturi atat pentru credite de nevoi personale cat si pentru refinantarea unuia activ. Va sprijinim pentru finantarea unui automobil sau a unei case cat si creerea unui plan si a unei strategii astfel incat plata sa poata fi mai rapida !',
+      [Language.DE]: 'Wir stehen Ihnen sowohl bei Privatkrediten als auch bei der Refinanzierung eines aktiven Kredits zur Seite. Wir unterstützen Sie bei der Finanzierung eines Autos oder Hauses sowie bei der Erstellung eines Plans und einer Strategie, damit die Zahlung schneller erfolgen kann!',
+      [Language.EN]: 'We are with you for both personal loans and for refinancing an active one. We support you for financing a car or a house as well as creating a plan and a strategy so that the payment can be faster!',
+      [Language.IT]: 'Siamo con te sia per i prestiti personali che per il rifinanziamento di uno attivo. Ti supportiamo per il finanziamento di un\'auto o di una casa oltre a creare un piano e una strategia in modo che il pagamento possa essere più veloce!',
+      [Language.RU]: 'Мы с вами как для получения личных кредитов, так и для рефинансирования действующего. Мы поддерживаем вас в финансировании автомобиля или дома, а также в создании плана и стратегии, чтобы платеж мог быть быстрее!',
+      [Language.AR]: 'نحن معك لكل من القروض الشخصية وإعادة تمويل قرض نشط. نحن ندعمك في تمويل سيارة أو منزل بالإضافة إلى إنشاء خطة واستراتيجية بحيث يمكن أن يكون الدفع أسرع!',
+    },
+    partners: [cristianBogdanPartner],
+  },
+    {
+    id: 'schufa-help',
+    iconName: 'Eraser',
+    title: { [Language.RO]: 'Curatare Schufa', [Language.DE]: 'Hilfe und Unterstützung bei niedrigem Schufa-Score', [Language.EN]: 'Help and support with a low Schufa score', [Language.IT]: 'Aiuto e supporto con un punteggio Schufa basso', [Language.RU]: 'Помощь и поддержка pri низком балле Schufa', [Language.AR]: 'المساعدة والدعم في حالة انخفاض درجة Schufa' },
+    description: { [Language.RO]: 'Consultanță pentru rectificarea scorului.', [Language.DE]: 'Beratung zur Score-Korrektur.', [Language.EN]: 'Consulting for score rectification.', [Language.IT]: 'Consulenza per la rettifica del punteggio.', [Language.RU]: 'Консультации по исправлению оценки.', [Language.AR]: 'استشارات لتصحيح النتيجة.' },
+    longDescription: {
+      [Language.RO]: 'Pentru clientii nostri activi oferim sfaturi si ajutor in revizuirea scorului Schufa !',
+      [Language.DE]: 'Für unsere aktiven Kunden bieten wir Beratung und Hilfe bei der Überprüfung des Schufa-Scores!',
+      [Language.EN]: 'For our active clients we offer advice and help in reviewing the Schufa score!',
+      [Language.IT]: 'Per i nostri clienti attivi offriamo consulenza e aiuto nella revisione del punteggio Schufa!',
+      [Language.RU]: 'Для наших активных клиентов мы предлагаем советы и помощь в пересмотре оценки Schufa!',
+      [Language.AR]: 'لعملائنا النشطين ، نقدم المشورة والمساعدة في مراجعة درجة Schufa!',
+    },
+    partners: [tudoseAlexandruFinanz],
+  },
+    {
+    id: 'tax-consulting',
+    iconName: 'Landmark',
+    title: { [Language.RO]: 'Steuerberater, Consiliere fiscala si recalculare de taxe', [Language.DE]: 'Steuerberater, Steuerberatung und Steuerneuberechnung', [Language.EN]: 'Tax Advisor, Tax Counseling and Tax Recalculation', [Language.IT]: 'Consulente Fiscale, Consulenza Fiscale e Ricalcolo Fiscale', [Language.RU]: 'Налоговый консультант, налоговые консультации и перерасчет налогов', [Language.AR]: 'مستشار ضرائب ، استشارات ضريبية وإعادة حساب الضرائب' },
+    description: { [Language.RO]: 'Consultanță fiscală specializată pentru optimizarea taxelor.', [Language.DE]: 'Spezialisierte Steuerberatung zur Steueroptimierung.', [Language.EN]: 'Specialized tax consulting for tax optimization.', [Language.IT]: 'Consulenza fiscale specializzata per l\'ottimizzazione fiscale.', [Language.RU]: 'Специализированные налоговые консультации для оптимизации налогообложения.', [Language.AR]: 'استشارات ضريبية متخصصة لتحسين الضرائب.' },
+    longDescription: {
+      [Language.RO]: 'Prin biroul nostru aveti posibilitatea de a beneficia de unul dintre cei mai buni Contabili cat si de cunostintele noastre atat pentru persoane fizice cat si pentru firme !',
+      [Language.DE]: 'Durch unser Büro haben Sie die Möglichkeit, von einem der besten Buchhalter sowie unserem Wissen für Privatpersonen und Unternehmen zu profitieren!',
+      [Language.EN]: 'Through our office you have the opportunity to benefit from one of the best Accountants as well as our knowledge for both individuals and companies!',
+      [Language.IT]: 'Attraverso il nostro ufficio hai l\'opportunità di beneficiare di uno dei migliori commercialisti e della nostra conoscenza sia per i privati che per le aziende!',
+      [Language.RU]: 'Через наш офис у вас есть возможность воспользоваться услугами одного из лучших бухгалтеров, а также нашими знаниями как для частных лиц, так и для компаний!',
+      [Language.AR]: 'من خلال مكتبنا ، لديك الفرصة للاستفادة من أحد أفضل المحاسبين وكذلك معرفتنا لكل من الأفراد والشركات!',
+    },
+    partners: [tudoseAlexandruFinanz],
+  },
+    {
+    id: 'insurance',
+    iconName: 'ShieldCheck',
+    title: { [Language.RO]: 'Asigurări', [Language.DE]: 'Versicherungen', [Language.EN]: 'Insurance', [Language.IT]: 'Assicurazioni', [Language.RU]: 'Страхование', [Language.AR]: 'تأمين' },
+    description: { [Language.RO]: 'Auto, viață, sănătate și bunuri.', [Language.DE]: 'Auto, Leben, Gesundheit und Eigentum.', [Language.EN]: 'Auto, life, health, and property.', [Language.IT]: 'Auto, vita, salute e proprietà.', [Language.RU]: 'Авто, жизнь, здоровье и имущество.', [Language.AR]: 'السيارات والحياة والصحة والممتلكات.' },
+    longDescription: {
+      [Language.RO]: 'Vă garantăm cel mai bun raport preț-calitate de pe piață! Plătiți puțin pentru servicii de top.',
+      [Language.DE]: 'Wir garantieren das beste Preis-Leistungs-Verhältnis auf dem Markt! Zahlen Sie wenig für Top-Dienstleistungen.',
+      [Language.EN]: 'We guarantee the best price-quality ratio on the market! Pay little for top services.',
+      [Language.IT]: 'Garantiamo il miglior rapporto qualità-prezzo sul mercato! Pagate poco per servizi di alto livello.',
+      [Language.RU]: 'Мы гарантируем лучшее соотношение цены и качества на рынке! Платите мало за первоклассные услуги.',
+      [Language.AR]: 'نحن نضمن أفضل نسبة سعر وجودة في السوق! ادفع القليل مقابل أفضل الخدمات.',
+    },
+    partners: [tudoseAlexandruFinanz, emanuelMladinPartner],
+  },
    {
     id: 'car-check',
     iconName: 'Search',
@@ -1160,52 +1235,6 @@ export const SERVICES: ServiceData[] = [
     website: 'https://cr85.info/', phone: '+49 15175312107' }],
   },
   {
-    id: 'tax-consulting',
-    iconName: 'Landmark',
-    title: { [Language.RO]: 'Steuerberater, Consiliere fiscala si recalculare de taxe', [Language.DE]: 'Steuerberater, Steuerberatung und Steuerneuberechnung', [Language.EN]: 'Tax Advisor, Tax Counseling and Tax Recalculation', [Language.IT]: 'Consulente Fiscale, Consulenza Fiscale e Ricalcolo Fiscale', [Language.RU]: 'Налоговый консультант, налоговые консультации и перерасчет налогов', [Language.AR]: 'مستشار ضرائب ، استشارات ضريبية وإعادة حساب الضرائب' },
-    description: { [Language.RO]: 'Consultanță fiscală specializată pentru optimizarea taxelor.', [Language.DE]: 'Spezialisierte Steuerberatung zur Steueroptimierung.', [Language.EN]: 'Specialized tax consulting for tax optimization.', [Language.IT]: 'Consulenza fiscale specializzata per l\'ottimizzazione fiscale.', [Language.RU]: 'Специализированные налоговые консультации для оптимизации налогообложения.', [Language.AR]: 'استشارات ضريبية متخصصة لتحسين الضرائب.' },
-    longDescription: {
-      [Language.RO]: 'Prin biroul nostru aveti posibilitatea de a beneficia de unul dintre cei mai buni Contabili cat si de cunostintele noastre atat pentru persoane fizice cat si pentru firme !',
-      [Language.DE]: 'Durch unser Büro haben Sie die Möglichkeit, von einem der besten Buchhalter sowie unserem Wissen für Privatpersonen und Unternehmen zu profitieren!',
-      [Language.EN]: 'Through our office you have the opportunity to benefit from one of the best Accountants as well as our knowledge for both individuals and companies!',
-      [Language.IT]: 'Attraverso il nostro ufficio hai l\'opportunità di beneficiare di uno dei migliori commercialisti e della nostra conoscenza sia per i privati che per le aziende!',
-      [Language.RU]: 'Через наш офис у вас есть возможность воспользоваться услугами одного из лучших бухгалтеров, а также нашими знаниями как для частных лиц, так и для компаний!',
-      [Language.AR]: 'من خلال مكتبنا ، لديك الفرصة للاستفادة من أحد أفضل المحاسبين وكذلك معرفتنا لكل من الأفراد والشركات!',
-    },
-    partners: [tudoseAlexandruFinanz],
-  },
-  {
-    id: 'insurance',
-    iconName: 'ShieldCheck',
-    title: { [Language.RO]: 'Asigurări', [Language.DE]: 'Versicherungen', [Language.EN]: 'Insurance', [Language.IT]: 'Assicurazioni', [Language.RU]: 'Страхование', [Language.AR]: 'تأمين' },
-    description: { [Language.RO]: 'Auto, viață, sănătate și bunuri.', [Language.DE]: 'Auto, Leben, Gesundheit und Eigentum.', [Language.EN]: 'Auto, life, health, and property.', [Language.IT]: 'Auto, vita, salute e proprietà.', [Language.RU]: 'Авто, жизнь, здоровье и имущество.', [Language.AR]: 'السيارات والحياة والصحة والممتلكات.' },
-    longDescription: {
-      [Language.RO]: 'Vă garantăm cel mai bun raport preț-calitate de pe piață! Plătiți puțin pentru servicii de top.',
-      [Language.DE]: 'Wir garantieren das beste Preis-Leistungs-Verhältnis auf dem Markt! Zahlen Sie wenig für Top-Dienstleistungen.',
-      [Language.EN]: 'We guarantee the best price-quality ratio on the market! Pay little for top services.',
-      [Language.IT]: 'Garantiamo il miglior rapporto qualità-prezzo sul mercato! Pagate poco per servizi di alto livello.',
-      [Language.RU]: 'Мы гарантируем лучшее соотношение цены и качества на рынке! Платите мало за первоклассные услуги.',
-      [Language.AR]: 'نحن نضمن أفضل نسبة سعر وجودة في السوق! ادفع القليل مقابل أفضل الخدمات.',
-    },
-    partners: [tudoseAlexandruFinanz, emanuelMladinPartner],
-  },
-  {
-    id: 'loans-financing',
-    iconName: 'Banknote',
-    title: { [Language.RO]: 'Credite, Finantari auto sau imobiliare si inchideri anticipate', [Language.DE]: 'Kredite, Auto- oder Immobilienfinanzierung und vorzeitige Schließungen', [Language.EN]: 'Loans, Car or Real Estate Financing and Early Closures', [Language.IT]: 'Prestiti, Finanziamenti Auto o Immobiliari e Chiusure Anticipate', [Language.RU]: 'Кредиты, финансирование автомобилей или недвижимости и досрочное погашение', [Language.AR]: 'قروض وتمويل سيارات أو عقارات وإغلاق مبكر' },
-    description: { [Language.RO]: 'Soluții de finanțare flexibile pentru planurile tale.', [Language.DE]: 'Flexible Finanzierungslösungen für Ihre Pläne.', [Language.EN]: 'Flexible financing solutions for your plans.', [Language.IT]: 'Soluzioni di finanziamento flessibili per i tuoi piani.', [Language.RU]: 'Гибкие финансовые решения для ваших планов.', [Language.AR]: 'حلول تمويل مرنة لخططك.' },
-    longDescription: {
-      [Language.RO]: 'Va suntem alaturi atat pentru credite de nevoi personale cat si pentru refinantarea unuia activ. Va sprijinim pentru finantarea unui automobil sau a unei case cat si creerea unui plan si a unei strategii astfel incat plata sa poata fi mai rapida !',
-      [Language.DE]: 'Wir stehen Ihnen sowohl bei Privatkrediten als auch bei der Refinanzierung eines aktiven Kredits zur Seite. Wir unterstützen Sie bei der Finanzierung eines Autos oder Hauses sowie bei der Erstellung eines Plans und einer Strategie, damit die Zahlung schneller erfolgen kann!',
-      [Language.EN]: 'We are with you for both personal loans and for refinancing an active one. We support you for financing a car or a house as well as creating a plan and a strategy so that the payment can be faster!',
-      [Language.IT]: 'Siamo con te sia per i prestiti personali che per il rifinanziamento di uno attivo. Ti supportiamo per il finanziamento di un\'auto o di una casa oltre a creare un piano e una strategia in modo che il pagamento possa essere più veloce!',
-      [Language.RU]: 'Мы с вами как для получения личных кредитов, так и для рефинансирования действующего. Мы поддерживаем вас в финансировании автомобиля или дома, а также в создании плана и стратегии, чтобы платеж мог быть быстрее!',
-      [Language.AR]: 'نحن معك لكل من القروض الشخصية وإعادة تمويل قرض نشط. نحن ندعمك في تمويل سيارة أو منزل بالإضافة إلى إنشاء خطة واستراتيجية بحيث يمكن أن يكون الدفع أسرع!',
-    },
-    partners: [tudoseAlexandruFinanz],
-  },
-
-  {
     id: 'translations',
     iconName: 'Languages',
     title: { [Language.RO]: 'Traduceri Legalizate', [Language.DE]: 'Beglaubigte Übersetzungen', [Language.EN]: 'Legalized Translations', [Language.IT]: 'Traduzioni Legalizzate', [Language.RU]: 'Легализованные переводы', [Language.AR]: 'ترجمات معتمدة' },
@@ -1217,21 +1246,6 @@ export const SERVICES: ServiceData[] = [
       [Language.IT]: 'Possiamo fornirvi traduzioni legalizzate in 35 lingue in un massimo di 24/48 ore a seconda della complessità!',
       [Language.RU]: 'Мы можем предоставить вам легализованные переводы на 35 языках в течение максимум 24/48 часов в зависимости от сложности!',
       [Language.AR]: 'يمكننا أن نقدم لك ترجمات معتمدة بـ 35 لغة في غضون 24/48 ساعة كحد أقصى حسب التعقيد!',
-    },
-    partners: [tudoseAlexandruFinanz],
-  },
-  {
-    id: 'schufa-help',
-    iconName: 'Eraser',
-    title: { [Language.RO]: 'Ajutor si sprijin cu scor Schufa scazut', [Language.DE]: 'Hilfe und Unterstützung bei niedrigem Schufa-Score', [Language.EN]: 'Help and support with a low Schufa score', [Language.IT]: 'Aiuto e supporto con un punteggio Schufa basso', [Language.RU]: 'Помощь и поддержка при низком балле Schufa', [Language.AR]: 'المساعدة والدعم في حالة انخفاض درجة Schufa' },
-    description: { [Language.RO]: 'Consultanță pentru rectificarea scorului.', [Language.DE]: 'Beratung zur Score-Korrektur.', [Language.EN]: 'Consulting for score rectification.', [Language.IT]: 'Consulenza per la rettifica del punteggio.', [Language.RU]: 'Консультации по исправлению оценки.', [Language.AR]: 'استشارات لتصحيح النتيجة.' },
-    longDescription: {
-      [Language.RO]: 'Pentru clientii nostri activi oferim sfaturi si ajutor in revizuirea scorului Schufa !',
-      [Language.DE]: 'Für unsere aktiven Kunden bieten wir Beratung und Hilfe bei der Überprüfung des Schufa-Scores!',
-      [Language.EN]: 'For our active clients we offer advice and help in reviewing the Schufa score!',
-      [Language.IT]: 'Per i nostri clienti attivi offriamo consulenza e aiuto nella revisione del punteggio Schufa!',
-      [Language.RU]: 'Для наших активных клиентов мы предлагаем советы и помощь в пересмотре оценки Schufa!',
-      [Language.AR]: 'لعملائنا النشطين ، نقدم المشورة والمساعدة في مراجعة درجة Schufa!',
     },
     partners: [tudoseAlexandruFinanz],
   },
